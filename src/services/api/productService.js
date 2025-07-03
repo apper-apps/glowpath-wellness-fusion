@@ -1,61 +1,218 @@
-import productData from '@/services/mockData/products.json';
-
 class ProductService {
   constructor() {
-    this.products = [...productData];
+    this.apperClient = null;
+    this.initApperClient();
+  }
+
+  initApperClient() {
+    const { ApperClient } = window.ApperSDK;
+    this.apperClient = new ApperClient({
+      apperProjectId: import.meta.env.VITE_APPER_PROJECT_ID,
+      apperPublicKey: import.meta.env.VITE_APPER_PUBLIC_KEY
+    });
   }
 
   async getAll() {
-    await this.delay();
-    return [...this.products];
+    try {
+      const params = {
+        fields: [
+          { field: { Name: "Name" } },
+          { field: { Name: "brand" } },
+          { field: { Name: "price" } },
+          { field: { Name: "rating" } },
+          { field: { Name: "image_url" } },
+          { field: { Name: "shop_url" } },
+          { field: { Name: "category" } }
+        ]
+      };
+      
+      const response = await this.apperClient.fetchRecords('product', params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      // Transform data to match UI expectations
+      const transformedData = response.data.map(item => ({
+        Id: item.Id,
+        name: item.Name,
+        brand: item.brand,
+        price: item.price,
+        rating: item.rating,
+        imageUrl: item.image_url,
+        shopUrl: item.shop_url,
+        category: item.category
+      }));
+      
+      return transformedData;
+    } catch (error) {
+      console.error("Error fetching products:", error);
+      throw error;
+    }
   }
 
   async getById(id) {
-    await this.delay();
-    const product = this.products.find(p => p.Id === id);
-    if (!product) {
-      throw new Error('Product not found');
+    try {
+      const params = {
+        fields: [
+          { field: { Name: "Name" } },
+          { field: { Name: "brand" } },
+          { field: { Name: "price" } },
+          { field: { Name: "rating" } },
+          { field: { Name: "image_url" } },
+          { field: { Name: "shop_url" } },
+          { field: { Name: "category" } }
+        ]
+      };
+      
+      const response = await this.apperClient.getRecordById('product', id, params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      const item = response.data;
+      return {
+        Id: item.Id,
+        name: item.Name,
+        brand: item.brand,
+        price: item.price,
+        rating: item.rating,
+        imageUrl: item.image_url,
+        shopUrl: item.shop_url,
+        category: item.category
+      };
+    } catch (error) {
+      console.error(`Error fetching product with ID ${id}:`, error);
+      throw error;
     }
-    return { ...product };
   }
 
   async getByCategory(category) {
-    await this.delay();
-    return this.products.filter(p => p.category === category);
+    try {
+      const params = {
+        fields: [
+          { field: { Name: "Name" } },
+          { field: { Name: "brand" } },
+          { field: { Name: "price" } },
+          { field: { Name: "rating" } },
+          { field: { Name: "image_url" } },
+          { field: { Name: "shop_url" } },
+          { field: { Name: "category" } }
+        ],
+        where: [{
+          FieldName: "category",
+          Operator: "EqualTo",
+          Values: [category]
+        }]
+      };
+      
+      const response = await this.apperClient.fetchRecords('product', params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      const transformedData = response.data.map(item => ({
+        Id: item.Id,
+        name: item.Name,
+        brand: item.brand,
+        price: item.price,
+        rating: item.rating,
+        imageUrl: item.image_url,
+        shopUrl: item.shop_url,
+        category: item.category
+      }));
+      
+      return transformedData;
+    } catch (error) {
+      console.error("Error fetching products by category:", error);
+      throw error;
+    }
   }
 
   async create(product) {
-    await this.delay();
-    const newProduct = {
-      ...product,
-      Id: Math.max(...this.products.map(p => p.Id)) + 1
-    };
-    this.products.push(newProduct);
-    return { ...newProduct };
+    try {
+      const params = {
+        records: [{
+          Name: product.name,
+          brand: product.brand,
+          price: product.price,
+          rating: product.rating,
+          image_url: product.imageUrl,
+          shop_url: product.shopUrl,
+          category: product.category
+        }]
+      };
+      
+      const response = await this.apperClient.createRecord('product', params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      return response.data;
+    } catch (error) {
+      console.error("Error creating product:", error);
+      throw error;
+    }
   }
 
   async update(id, data) {
-    await this.delay();
-    const index = this.products.findIndex(p => p.Id === id);
-    if (index === -1) {
-      throw new Error('Product not found');
+    try {
+      const updateData = {
+        Id: id
+      };
+      
+      // Only include updateable fields
+      if (data.name !== undefined) updateData.Name = data.name;
+      if (data.brand !== undefined) updateData.brand = data.brand;
+      if (data.price !== undefined) updateData.price = data.price;
+      if (data.rating !== undefined) updateData.rating = data.rating;
+      if (data.imageUrl !== undefined) updateData.image_url = data.imageUrl;
+      if (data.shopUrl !== undefined) updateData.shop_url = data.shopUrl;
+      if (data.category !== undefined) updateData.category = data.category;
+      
+      const params = {
+        records: [updateData]
+      };
+      
+      const response = await this.apperClient.updateRecord('product', params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      return response.data;
+    } catch (error) {
+      console.error("Error updating product:", error);
+      throw error;
     }
-    this.products[index] = { ...this.products[index], ...data };
-    return { ...this.products[index] };
   }
 
   async delete(id) {
-    await this.delay();
-    const index = this.products.findIndex(p => p.Id === id);
-    if (index === -1) {
-      throw new Error('Product not found');
+    try {
+      const params = {
+        RecordIds: [id]
+      };
+      
+      const response = await this.apperClient.deleteRecord('product', params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      return true;
+    } catch (error) {
+      console.error("Error deleting product:", error);
+      throw error;
     }
-    this.products.splice(index, 1);
-    return true;
-  }
-
-  delay() {
-    return new Promise(resolve => setTimeout(resolve, 250));
   }
 }
 
