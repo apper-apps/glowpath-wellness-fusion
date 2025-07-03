@@ -1,16 +1,32 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { toast } from 'react-toastify';
+import { useSelector } from 'react-redux';
 import ApperIcon from '@/components/ApperIcon';
 import Button from '@/components/atoms/Button';
 import ProfileStats from '@/components/molecules/ProfileStats';
 import SettingsSection from '@/components/molecules/SettingsSection';
-
 const ProfilePage = () => {
+  // Get user data from Redux store
+  const { user, isAuthenticated } = useSelector((state) => state.user);
+  
+  // Get user display name and email from authenticated user
+  const getUserDisplayName = () => {
+    if (!user) return 'User';
+    const firstName = user.firstName || '';
+    const lastName = user.lastName || '';
+    return `${firstName} ${lastName}`.trim() || user.emailAddress || 'User';
+  };
+
+  const getUserEmail = () => {
+    return user?.emailAddress || '';
+  };
+
+  const getCompanyName = () => {
+    return user?.accounts?.[0]?.companyName || '';
+  };
+
   const [userProfile, setUserProfile] = useState({
-    name: 'Sarah Johnson',
-    email: 'sarah.johnson@example.com',
-    joinDate: '2024-01-15',
     streak: 7,
     totalExercises: 45,
     favoriteProducts: 12,
@@ -22,15 +38,13 @@ const ProfilePage = () => {
 
   const [isEditing, setIsEditing] = useState(false);
   const [editForm, setEditForm] = useState({
-    name: userProfile.name,
     waterGoal: userProfile.waterGoal,
     weeklyGoal: userProfile.weeklyGoal
   });
 
-  const handleEditToggle = () => {
+const handleEditToggle = () => {
     if (isEditing) {
       setEditForm({
-        name: userProfile.name,
         waterGoal: userProfile.waterGoal,
         weeklyGoal: userProfile.weeklyGoal
       });
@@ -83,15 +97,12 @@ const ProfilePage = () => {
             <ApperIcon name="User" size={40} className="text-white" />
           </div>
           
-          <div className="flex-1 text-center md:text-left">
+<div className="flex-1 text-center md:text-left">
             {isEditing ? (
               <div className="space-y-4">
-                <input
-                  type="text"
-                  value={editForm.name}
-                  onChange={(e) => setEditForm(prev => ({ ...prev, name: e.target.value }))}
-                  className="w-full text-2xl font-display font-bold bg-transparent border-b-2 border-accent focus:outline-none"
-                />
+                <div className="text-2xl font-display font-bold text-gray-800 bg-transparent border-b-2 border-accent pb-2">
+                  {getUserDisplayName()}
+                </div>
                 <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
                   <div>
                     <label className="block text-sm text-gray-600 mb-1">Daily Water Goal</label>
@@ -120,11 +131,16 @@ const ProfilePage = () => {
             ) : (
               <div>
                 <h3 className="text-2xl font-display font-bold text-gray-800">
-                  {userProfile.name}
+                  {getUserDisplayName()}
                 </h3>
-                <p className="text-gray-600 mb-2">{userProfile.email}</p>
+                <p className="text-gray-600 mb-2">{getUserEmail()}</p>
+                {getCompanyName() && (
+                  <p className="text-sm text-gray-500 mb-1">
+                    {getCompanyName()}
+                  </p>
+                )}
                 <p className="text-sm text-gray-500">
-                  Member since {new Date(userProfile.joinDate).toLocaleDateString()}
+                  {isAuthenticated ? 'Authenticated User' : 'Guest User'}
                 </p>
               </div>
             )}

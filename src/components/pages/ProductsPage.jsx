@@ -26,9 +26,11 @@ const ProductsPage = () => {
       setLoading(true);
       setError('');
       const data = await productService.getAll();
-      setProducts(data);
+      setProducts(data || []);
     } catch (err) {
+      console.error('Error loading products:', err);
       setError('Failed to load products. Please try again.');
+      setProducts([]);
     } finally {
       setLoading(false);
     }
@@ -40,11 +42,11 @@ const ProductsPage = () => {
 
   const filteredProducts = selectedCategory === 'all' 
     ? products 
-    : products.filter(product => product.category === selectedCategory);
+    : products.filter(product => product?.category === selectedCategory);
 
   if (loading) return <Loading />;
   if (error) return <Error message={error} onRetry={loadProducts} />;
-  if (products.length === 0) return <Empty message="No products available" />;
+  if (!products || products.length === 0) return <Empty message="No products available" />;
 
   return (
     <div className="space-y-6">

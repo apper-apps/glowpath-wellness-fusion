@@ -16,9 +16,11 @@ const ExercisesPage = () => {
       setLoading(true);
       setError('');
       const data = await exerciseService.getAll();
-      setExercises(data);
+      setExercises(data || []);
     } catch (err) {
+      console.error('Error loading exercises:', err);
       setError('Failed to load exercises. Please try again.');
+      setExercises([]);
     } finally {
       setLoading(false);
     }
@@ -30,7 +32,7 @@ const ExercisesPage = () => {
 
   if (loading) return <Loading />;
   if (error) return <Error message={error} onRetry={loadExercises} />;
-  if (exercises.length === 0) return <Empty message="No exercises available" />;
+  if (!exercises || exercises.length === 0) return <Empty message="No exercises available" />;
 
   return (
     <div className="space-y-6">
