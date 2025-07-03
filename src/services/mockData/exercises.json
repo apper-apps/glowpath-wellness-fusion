@@ -1,0 +1,143 @@
+[
+  {
+    "Id": 1,
+    "title": "Morning Facial Massage",
+    "description": "A gentle 5-minute routine to boost circulation and reduce puffiness",
+    "duration": 5,
+    "imageUrl": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=300&fit=crop",
+    "steps": [
+      "Wash your hands thoroughly and apply a small amount of facial oil",
+      "Start with gentle circular motions from your forehead down to your temples",
+      "Use upward strokes along your cheeks towards your ears",
+      "Gently massage under your eyes with your ring finger",
+      "Finish with gentle tapping motions all over your face"
+    ],
+    "benefits": [
+      "Improved blood circulation",
+      "Reduced morning puffiness",
+      "Enhanced product absorption",
+      "Stress relief and relaxation"
+    ]
+  },
+  {
+    "Id": 2,
+    "title": "Lymphatic Drainage",
+    "description": "Target lymph nodes to reduce swelling and promote detoxification",
+    "duration": 7,
+    "imageUrl": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&h=300&fit=crop",
+    "steps": [
+      "Apply gentle pressure to lymph nodes behind your ears",
+      "Sweep downward from ears to collarbone",
+      "Use light pressure to massage from center of face outward",
+      "Gently press and release around jawline",
+      "End with downward strokes along the neck"
+    ],
+    "benefits": [
+      "Reduced facial swelling",
+      "Improved skin tone",
+      "Enhanced natural detoxification",
+      "Lifted facial contours"
+    ]
+  },
+  {
+    "Id": 3,
+    "title": "Eye Area Refresh",
+    "description": "Specialized movements to target fine lines and dark circles",
+    "duration": 4,
+    "imageUrl": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=300&fit=crop",
+    "steps": [
+      "Use ring finger to gently tap around the eye area",
+      "Make small circles from inner corner to outer corner",
+      "Gently press and lift the eyebrow area",
+      "Use pinching motions along the eyebrow",
+      "Finish with cooling cucumber slices for 2 minutes"
+    ],
+    "benefits": [
+      "Reduced fine lines",
+      "Diminished dark circles",
+      "Improved eye area circulation",
+      "Refreshed, awakened look"
+    ]
+  },
+  {
+    "Id": 4,
+    "title": "Cheek Lifting Technique",
+    "description": "Targeted movements to lift and tone cheek muscles",
+    "duration": 6,
+    "imageUrl": "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=400&h=300&fit=crop",
+    "steps": [
+      "Place palms on cheeks and lift upward gently",
+      "Use fingertips to make circular motions on cheekbones",
+      "Pinch along the jawline from chin to ears",
+      "Apply upward pressure while smiling",
+      "Hold smile for 10 seconds, repeat 5 times"
+    ],
+    "benefits": [
+      "Lifted cheek contours",
+      "Improved muscle tone",
+      "Enhanced facial definition",
+      "Natural anti-aging effects"
+    ]
+  },
+  {
+    "Id": 5,
+    "title": "Jawline Sculpting",
+    "description": "Define and strengthen your jawline with targeted exercises",
+    "duration": 5,
+    "imageUrl": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&h=300&fit=crop",
+    "steps": [
+      "Place thumbs under chin and apply gentle upward pressure",
+      "Move fingers along jawline from chin to ears",
+      "Use knuckles to massage along the jaw",
+      "Open mouth wide, then close slowly - repeat 10 times",
+      "Finish with gentle circular motions at jaw joints"
+    ],
+    "benefits": [
+      "Defined jawline",
+      "Reduced double chin appearance",
+      "Improved jaw muscle strength",
+      "Enhanced facial symmetry"
+    ]
+  },
+  {
+    "Id": 6,
+    "title": "Forehead Smoothing",
+    "description": "Reduce tension and smooth forehead lines",
+    "duration": 4,
+    "imageUrl": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&h=300&fit=crop",
+    "steps": [
+      "Place fingers on forehead and smooth outward to temples",
+      "Use gentle upward strokes from eyebrows to hairline",
+      "Apply light pressure to release tension points",
+      "Raise eyebrows and hold for 5 seconds, repeat 8 times",
+      "End with soothing circular motions at temples"
+    ],
+    "benefits": [
+      "Reduced forehead lines",
+      "Released facial tension",
+      "Improved blood flow",
+      "Relaxed facial muscles"
+    ]
+  },
+  {
+    "Id": 7,
+    "title": "Full Face Glow Routine",
+    "description": "Complete 10-minute routine for radiant, healthy-looking skin",
+    "duration": 10,
+    "imageUrl": "https://images.unsplash.com/photo-1586380758270-4b8b78a6c647?w=400&h=300&fit=crop",
+    "steps": [
+      "Begin with gentle cleansing and apply facial oil",
+      "Start with forehead smoothing techniques",
+      "Move to eye area refresh exercises",
+      "Perform cheek lifting and jawline sculpting",
+      "Complete with lymphatic drainage movements",
+      "Finish with gentle tapping all over face"
+    ],
+    "benefits": [
+      "Complete facial rejuvenation",
+      "Maximum circulation boost",
+      "Comprehensive muscle toning",
+      "Radiant, glowing complexion"
+    ]
+  }
+]

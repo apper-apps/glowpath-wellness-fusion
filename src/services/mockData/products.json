@@ -1,0 +1,202 @@
+[
+  {
+    "Id": 1,
+    "name": "Gentle Foam Cleanser",
+    "brand": "GlowEssentials",
+    "price": 24.99,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/gentle-foam-cleanser",
+    "category": "cleanser"
+  },
+  {
+    "Id": 2,
+    "name": "Hydrating Vitamin C Serum",
+    "brand": "VitaGlow",
+    "price": 39.99,
+    "rating": 4.9,
+    "imageUrl": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/vitamin-c-serum",
+    "category": "serum"
+  },
+  {
+    "Id": 3,
+    "name": "Daily Moisture Cream",
+    "brand": "SkinLux",
+    "price": 32.50,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1591652026749-a8e7e3a5b5a2?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/daily-moisture-cream",
+    "category": "moisturizer"
+  },
+  {
+    "Id": 4,
+    "name": "Broad Spectrum SPF 50",
+    "brand": "SunShield",
+    "price": 28.99,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/spf-50-sunscreen",
+    "category": "sunscreen"
+  },
+  {
+    "Id": 5,
+    "name": "Niacinamide Pore Minimizer",
+    "brand": "PureSkin",
+    "price": 22.99,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/niacinamide-serum",
+    "category": "serum"
+  },
+  {
+    "Id": 6,
+    "name": "Gentle Exfoliating Scrub",
+    "brand": "GlowEssentials",
+    "price": 19.99,
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/exfoliating-scrub",
+    "category": "treatment"
+  },
+  {
+    "Id": 7,
+    "name": "Hyaluronic Acid Moisturizer",
+    "brand": "HydraLux",
+    "price": 45.00,
+    "rating": 4.9,
+    "imageUrl": "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/hyaluronic-moisturizer",
+    "category": "moisturizer"
+  },
+  {
+    "Id": 8,
+    "name": "Retinol Night Treatment",
+    "brand": "NightGlow",
+    "price": 52.99,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1590439471364-192aa70c5b57?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/retinol-night-treatment",
+    "category": "treatment"
+  },
+  {
+    "Id": 9,
+    "name": "Micellar Cleansing Water",
+    "brand": "PureCleanse",
+    "price": 16.99,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1615397349754-cfa2066a298e?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/micellar-water",
+    "category": "cleanser"
+  },
+  {
+    "Id": 10,
+    "name": "Peptide Anti-Aging Serum",
+    "brand": "YouthRenew",
+    "price": 67.99,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/peptide-serum",
+    "category": "serum"
+  },
+  {
+    "Id": 11,
+    "name": "Mineral Sunscreen SPF 30",
+    "brand": "EcoSun",
+    "price": 34.99,
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/mineral-sunscreen",
+    "category": "sunscreen"
+  },
+  {
+    "Id": 12,
+    "name": "Overnight Hydrating Mask",
+    "brand": "SkinLux",
+    "price": 41.50,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/overnight-mask",
+    "category": "treatment"
+  },
+  {
+    "Id": 13,
+    "name": "Ceramide Barrier Cream",
+    "brand": "BarrierFix",
+    "price": 38.99,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1591652026749-a8e7e3a5b5a2?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/ceramide-cream",
+    "category": "moisturizer"
+  },
+  {
+    "Id": 14,
+    "name": "BHA Gentle Exfoliant",
+    "brand": "ExfoliCare",
+    "price": 29.99,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/bha-exfoliant",
+    "category": "treatment"
+  },
+  {
+    "Id": 15,
+    "name": "Oil-Free Gel Cleanser",
+    "brand": "ClearSkin",
+    "price": 21.99,
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/gel-cleanser",
+    "category": "cleanser"
+  },
+  {
+    "Id": 16,
+    "name": "Brightening Eye Cream",
+    "brand": "EyeGlow",
+    "price": 49.99,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/eye-cream",
+    "category": "treatment"
+  },
+  {
+    "Id": 17,
+    "name": "Zinc Oxide Sunscreen",
+    "brand": "SunShield",
+    "price": 26.99,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/zinc-sunscreen",
+    "category": "sunscreen"
+  },
+  {
+    "Id": 18,
+    "name": "Alpha Arbutin Serum",
+    "brand": "BrightSkin",
+    "price": 33.99,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/alpha-arbutin-serum",
+    "category": "serum"
+  },
+  {
+    "Id": 19,
+    "name": "Lightweight Day Moisturizer",
+    "brand": "DayGlow",
+    "price": 27.50,
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/day-moisturizer",
+    "category": "moisturizer"
+  },
+  {
+    "Id": 20,
+    "name": "Glycolic Acid Treatment",
+    "brand": "RenewSkin",
+    "price": 44.99,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1590439471364-192aa70c5b57?w=400&h=400&fit=crop",
+    "shopUrl": "https://amazon.com/glycolic-treatment",
+    "category": "treatment"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "Id": 1,
+    "type": "water",
+    "time": "08:00",
+    "enabled": true,
+    "message": "💧 Time to hydrate! Drink a glass of water to start your day right."
+  },
+  {
+    "Id": 2,
+    "type": "water",
+    "time": "10:00",
+    "enabled": true,
+    "message": "💧 Keep the hydration going! Your skin will thank you."
+  },
+  {
+    "Id": 3,
+    "type": "water",
+    "time": "12:00",
+    "enabled": true,
+    "message": "💧 Midday hydration check! Time for another glass of water."
+  },
+  {
+    "Id": 4,
+    "type": "water",
+    "time": "14:00",
+    "enabled": true,
+    "message": "💧 Afternoon refresh! Stay hydrated for glowing skin."
+  },
+  {
+    "Id": 5,
+    "type": "water",
+    "time": "16:00",
+    "enabled": true,
+    "message": "💧 Don't forget to hydrate! Your wellness journey continues."
+  },
+  {
+    "Id": 6,
+    "type": "water",
+    "time": "18:00",
+    "enabled": true,
+    "message": "💧 Evening hydration time! Keep that glow going strong."
+  },
+  {
+    "Id": 7,
+    "type": "exercise",
+    "time": "07:00",
+    "enabled": true,
+    "message": "🌅 Good morning! Ready for your daily facial exercise routine?"
+  },
+  {
+    "Id": 8,
+    "type": "exercise",
+    "time": "19:00",
+    "enabled": false,
+    "message": "🌙 Evening glow time! Consider a relaxing facial massage."
+  },
+  {
+    "Id": 9,
+    "type": "skincare",
+    "time": "06:30",
+    "enabled": true,
+    "message": "✨ Morning skincare routine! Start your day with self-care."
+  },
+  {
+    "Id": 10,
+    "type": "skincare",
+    "time": "21:00",
+    "enabled": true,
+    "message": "🌙 Nighttime skincare! Wind down with your evening routine."
+  }
+]
